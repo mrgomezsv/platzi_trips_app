@@ -61,6 +61,7 @@ class DescriptionPlace extends StatelessWidget {
             namePlace,
             style: const TextStyle(
                 fontSize: 30.0,
+                fontFamily: "Lato",
                 fontWeight: FontWeight.w900
             ),
             textAlign: TextAlign.left,
@@ -77,8 +78,6 @@ class DescriptionPlace extends StatelessWidget {
             star_half
           ],
         )
-
-
       ],
     );
 
@@ -93,6 +92,7 @@ class DescriptionPlace extends StatelessWidget {
         descriptionPlace,
         style: const TextStyle(
             fontSize: 16.0,
+            fontFamily: "Lato",
             fontWeight: FontWeight.bold,
             color: Color(0xFF56575a)
         ),
