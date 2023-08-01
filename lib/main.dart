@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'description_place.dart';
+import 'revies_list.dart';
 
 void main() => runApp(MyApp());
 
@@ -19,7 +20,8 @@ class MyApp extends StatelessWidget {
           appBar: AppBar(
             title: const Text("App de Vacaciones"),
           ),
-          body: DescriptionPlace("Bahamas", 4, descriptionDummy),
+          //body: DescriptionPlace("Bahamas", 4, descriptionDummy),
+          body: ReviewList(),
         )//MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
