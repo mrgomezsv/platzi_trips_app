@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:platzi_trips_app/review.dart';
 
 class ReviewList extends StatelessWidget{
+  const ReviewList({super.key});
+
   @override
   Widget build(BuildContext context) {
     // TODO: implement build

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'description_place.dart';
 import 'revies_list.dart';
+import 'gradient_back.dart';
 
 void main() => runApp(MyApp());
 
@@ -12,17 +13,26 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'Flutter Demo',
-        theme: ThemeData(
-          primarySwatch: Colors.blue,
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: Scaffold(
+        //appBar: AppBar(
+        //  title: const Text("App de Vacaciones"),
+        //),
+        body: Stack(
+          children: <Widget>[
+            ListView(
+              children: <Widget>[
+                DescriptionPlace("Bahamas", 4, descriptionDummy),
+                const ReviewList(),
+              ],
+            ),
+            GradientBack(),
+          ],
         ),
-        home: Scaffold(
-          appBar: AppBar(
-            title: const Text("App de Vacaciones"),
-          ),
-          //body: DescriptionPlace("Bahamas", 4, descriptionDummy),
-          body: ReviewList(),
-        )//MyHomePage(title: 'Flutter Demo Home Page'),
+      ),
     );
   }
 }
