@@ -3,6 +3,7 @@ import 'description_place.dart';
 import 'revies_list.dart';
 import 'gradient_back.dart';
 import 'header_appbar.dart';
+import 'package:platzi_trips_app/platzi_trips.dart';
 
 void main() => runApp(MyApp());
 
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home:
+      home: PlatziTrips() //Se llama a la navigation bar
     );
   }
 }
