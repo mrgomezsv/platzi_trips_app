@@ -10,6 +10,13 @@ class ButtonPurple extends StatelessWidget {
   Widget build(BuildContext context) {
     // TODO: implement build
     return InkWell(
+      onTap: () { //Probando que el boton funcione
+        ScaffoldMessenger.of(context).showSnackBar(
+            const SnackBar(
+              content: Text("Navegando"),
+            )
+        );
+      },
       child: Container(
         margin: const EdgeInsets.only(
           top: 30.0,
