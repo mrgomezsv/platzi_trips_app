@@ -13,7 +13,7 @@ class ProfileTrips extends StatelessWidget {
             height: 85,
             width: 85,
             decoration: BoxDecoration(
-                image: const DecorationImage(image: AssetImage("assets/river.jpeg")),
+                image: const DecorationImage(image: AssetImage("assets/img/roberto.jpg",)),
                 shape: BoxShape.circle,
                 border: Border.all(width: 2.0, color: Colors.white)),
           ),
@@ -50,7 +50,7 @@ class ProfileTrips extends StatelessWidget {
     return Stack(
       children: <Widget>[
         GradientBack(
-          "Profile",
+          "",
           height: 380,
         ),
         const Positioned(
@@ -62,6 +62,21 @@ class ProfileTrips extends StatelessWidget {
             color: Colors.white38,
           ),
         ),
+        const Align(
+          alignment: Alignment.topCenter,
+          child: Padding(
+            padding: EdgeInsets.only(top: 38, right: 270), // Ajusta el valor aquí para mover el texto hacia arriba
+            child: Text(
+              "Profile",
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 30.0,
+                fontFamily: "Lato",
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
+        ),
         Column(
           children: <Widget>[detailProfile, widgetMenu],
         ),
@@ -71,12 +86,12 @@ class ProfileTrips extends StatelessWidget {
             CardImageDetail(
                 "Knuckles Mountains Range",
                 "Elit ipsum ex nostrud laborum magna anim culpa velit voluptate eiusmod.",
-                "assets/mountain.jpeg",
+                "assets/img/mountain.jpeg",
                 13000),
             CardImageDetail(
                 "Knuckles Mountains Range",
                 "Elit ipsum ex nostrud laborum magna anim culpa velit voluptate eiusmod incididunt.",
-                "assets/beach.jpeg",
+                "assets/img/beach.jpeg",
                 13000),
           ],
         )
@@ -91,6 +106,9 @@ class ProfileTrips extends StatelessWidget {
       child: Container(
         height: mini ? 35 : 60,
         width: mini ? 35 : 60,
+        decoration: BoxDecoration(
+            shape: BoxShape.circle,
+            color: active ? Colors.white : Colors.white54),
         child: Center(
           child: Icon(
             iconData,
@@ -98,9 +116,6 @@ class ProfileTrips extends StatelessWidget {
             size: mini ? 20 : 50,
           ),
         ),
-        decoration: BoxDecoration(
-            shape: BoxShape.circle,
-            color: active ? Colors.white : Colors.white54),
       ),
     );
   }
