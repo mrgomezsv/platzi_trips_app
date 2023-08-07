@@ -13,21 +13,33 @@ class ProfileTrips extends StatelessWidget {
             height: 85,
             width: 85,
             decoration: BoxDecoration(
-                image: const DecorationImage(image: AssetImage("assets/img/roberto.jpg",)),
-                shape: BoxShape.circle,
-                border: Border.all(width: 2.0, color: Colors.white)),
+              shape: BoxShape.circle,
+              border: Border.all(width: 2.0, color: Colors.white),
+              image: const DecorationImage(
+                image: AssetImage("assets/img/roberto.jpg"),
+                fit: BoxFit.cover, // Agregamos fit: BoxFit.cover aquí
+              ),
+            ),
           ),
           const Padding(
             padding: EdgeInsets.only(left: 12),
             child: Text.rich(TextSpan(children: [
               TextSpan(
-                  text: "Mario Roberto\n",
-                  style: TextStyle(
-                      color: Colors.white, fontSize: 16, fontFamily: "Lato")),
+                text: "Mario Roberto\n",
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 16,
+                  fontFamily: "Lato",
+                ),
+              ),
               TextSpan(
-                  text: "mrgomez.dev@gmail.com",
-                  style: TextStyle(
-                      color: Colors.white24, fontSize: 16, fontFamily: "Lato"))
+                text: "mrgomez.dev@gmail.com",
+                style: TextStyle(
+                  color: Colors.white24,
+                  fontSize: 16,
+                  fontFamily: "Lato",
+                ),
+              ),
             ])),
           )
         ],
